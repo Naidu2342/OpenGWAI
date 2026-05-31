@@ -1,10 +1,10 @@
-streamlit==1.45.1
-numpy==1.26.4
-scipy==1.13.1
-h5py==3.11.0
-plotly==5.24.1
-tensorflow==2.16.1
-keras==3.3.3
+streamlit
+numpy
+scipy
+h5py
+plotly
+tensorflow
+keras
 huggingface_hub
 pandas
 scikit-learn
