@@ -1,20 +1,102 @@
-# 🌌 Explainable AI Gravitational-Wave Analysis System
+# 🌌 OpenGWAI
 
-[![Python Version](https://img.shields.io/badge/Python-3.9+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Models-yellow.svg?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+<p align="center">
+  <h3 align="center">Open Gravitational-Wave Explainable Artificial Intelligence Framework</h3>
+  <p align="center">
+    Detect • Analyze • Explain Gravitational-Wave Signals with AI
+  </p>
+</p>
 
-An interactive, scientific AI platform designed to analyze, visualize, and interpret gravitational-wave detector signals using deep learning, digital signal processing (DSP), and explainable AI (XAI) techniques.
+<p align="center">
 
-Unlike traditional black-box classification models, this system bridges the gap between deep learning predictions and scientific understanding by generating interactive visual overlays, frequency spectra, and human-readable, context-aware scientific explanations powered by LLMs.
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge\&logo=tensorflow\&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)
+![Explainable AI](https://img.shields.io/badge/XAI-Enabled-blueviolet?style=for-the-badge)
+![Research](https://img.shields.io/badge/Research-Astrophysics-purple?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+</p>
+
+<p align="center">
+
+![Stars](https://img.shields.io/github/stars/Naidu2342/OpenGWAI?style=social)
+![Forks](https://img.shields.io/github/forks/Naidu2342/OpenGWAI?style=social)
+
+</p>
 
 ---
 
-## 🚀 System Architecture & Workflow
+## 📖 Overview
 
-The platform handles everything from raw detector telemetry to fully explained scientific results:
+OpenGWAI is an Explainable Artificial Intelligence (XAI) framework for gravitational-wave signal detection, analysis, and scientific interpretation.
+
+The project combines Digital Signal Processing (DSP), Fast Fourier Transform (FFT) analysis, Deep Learning, and Large Language Models (LLMs) to transform raw detector strain data into understandable and interpretable scientific insights.
+
+Unlike traditional black-box classifiers, OpenGWAI provides transparency by showing waveform characteristics, spectral behavior, localized neural detections, and AI-generated scientific explanations that help users understand why a signal was classified as a potential gravitational-wave event.
+
+This project is intended for:
+
+* Research and experimentation
+* Astrophysics education
+* Signal processing studies
+* Explainable AI demonstrations
+* Machine learning applications in physics
+
+---
+
+## ✨ Features
+
+### 🔬 Signal Processing
+
+* Butterworth Low-Pass Filtering
+* Signal Normalization
+* Noise Reduction Pipeline
+* Sliding Window Segmentation
+* Time-Domain Waveform Analysis
+
+### 📈 Spectral Analysis
+
+* Fast Fourier Transform (FFT)
+* Frequency Spectrum Visualization
+* Dominant Frequency Detection
+* Spectral Energy Analysis
+* Detector Noise Inspection
+
+### 🧠 Deep Learning
+
+* 1D Convolutional Neural Network
+* Localized Event Detection
+* Probability Mapping
+* Confidence Scoring
+* Real-Time Signal Inference
+
+### 🤖 Explainable AI
+
+* AI-Generated Scientific Explanations
+* Context-Aware Interpretation
+* Confidence Analysis
+* Signal Characteristic Explanation
+* Human-Readable Reports
+
+### 📊 Interactive Visualization
+
+* Original vs Filtered Signal Comparison
+* FFT Spectrum Charts
+* Detection Probability Timeline
+* Interactive Plotly Visualizations
+* Streamlit Dashboard Interface
+
+### 🕘 Analysis Tracking
+
+* Local Analysis History
+* JSON-Based Experiment Logging
+* Previous Detection Review
+* Historical Analysis Dashboard
+
+---
+
+# 🏗 System Architecture
 
 ```mermaid
 flowchart TD
@@ -43,105 +125,328 @@ K --> M[Interactive Dashboard]
 
 ---
 
-## ✨ Features
-
-- **📡 Dual-Channel Visualization:** View and compare original noisy signals against filtered, noise-reduced waveforms in real time.
-- **🧹 Advanced Signal Processing:** Interactive Butterworth low-pass filtering and min-max signal normalization to uncover transient astrophysical structures.
-- **🌌 FFT Spectral Analysis:** Transform waveforms to the frequency domain to isolate dominant spectral peaks, identify detector noise, and inspect signal energy.
-- **🧠 Localized 1D CNN Inference:** Slice signals into overlapping windows to identify the exact position of gravitational-wave chirps and plot probability time series.
-- **🤖 LLM-Powered Explainable AI (XAI):** Generate contextual interpretations of analysis metrics (confidence, SNR, dominant frequency, FFT patterns, chirp characteristics) using Hugging Face's inference API (`Qwen/Qwen2.5-72B-Instruct`).
-- **🕘 Analysis History Ledger:** Persist your findings locally in JSON and explore past runs with expandable detail panels.
-
----
-
-## 📂 Codebase Directory Structure
+## 📂 Repository Structure
 
 ```text
+OpenGWAI/
+│
 ├── models/
-│   ├── cnn_model.keras             # Trained Keras 1D CNN Model
-│   └── cnn_metadata.json           # Model hyperparameter and accuracy metadata
-├── history/                        # Saved analysis history ledgers (JSON files)
-├── streamlit_app.py                # Core interactive Multi-page Web App
-├── build_waveform_dataset.py       # Dataset assembler using real LIGO events
-├── train_cnn.py                    # 1D CNN training pipeline
-├── evalaute_model.py               # Model evaluation & performance metrics script
-├── explore_file.py                 # LIGO HDF5 file recursive explorer utility
-├── generate_fake_raw_hdf5.py       # Synthetic raw signal & glitch generator
-├── test_api.py                     # Gemini API connectivity validator
-└── requirements.txt                # Project dependencies
+│   ├── cnn_model.keras
+│   └── cnn_metadata.json
+│
+├── history/
+│   └── *.json
+│
+├── build_waveform_dataset.py
+├── train_cnn.py
+├── evalaute_model.py
+├── explore_file.py
+├── generate_fake_raw_hdf5.py
+├── streamlit_app.py
+│
+├── fake_raw_signal.hdf5
+├── X.npy
+├── y.npy
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🛠️ Deep Dive: Code & Scripts
+## 🚀 Installation
 
-### 1. `streamlit_app.py`
-The frontend and orchestration center. Features sidebar visualization parameters (FFT Scale, Max frequency sliders, filter strengths), interactive Plotly overlays, real-time inference, and automatic caching for quick file exploration.
+### Clone the Repository
 
-### 2. `build_waveform_dataset.py`
-Builds training datasets (`X.npy`, `y.npy`) from raw LIGO strain files. Slices positive regions (e.g., around `GW150914` or `GW170817`) and negative regions (background detector noise before and after the event) into overlapping sliding windows (size: 1024, step: 256).
-
-### 3. `train_cnn.py`
-Trains a high-performance 1D Convolutional Neural Network. Architecture includes:
-- Multiple 1D Convolutional blocks with ReLU activations, Batch Normalization, and Max Pooling.
-- Fully connected Dense layers with Dropout (0.4 and 0.3) to prevent overfitting.
-- Adam Optimizer with learning rate decay schedules (`ReduceLROnPlateau`) and `EarlyStopping` monitoring validation loss.
-- Automatically handles dataset imbalances by calculating class weights.
-
-### 4. `evalaute_model.py`
-Loads the trained Keras model and evaluates its confusion matrix, precision, recall, F1-score, and accuracy on test splits under specific confidence thresholds.
-
-### 5. `generate_fake_raw_hdf5.py`
-Generates a highly challenging synthetic dataset (`fake_raw_signal.hdf5`) containing a normalized gravitational wave corrupted by:
-- Strong Gaussian noise.
-- Low-frequency drifts (sine-drift simulating seismic noise).
-- High-frequency oscillations.
-- Discontinuous random amplitude glitches (simulating instrument glitches).
-Perfect for validating the robustness of your noise-reduction filters and CNN.
-
----
-
-## ⚙️ Installation & Setup
-
-### Prerequisite: Python
-Make sure you have Python 3.9 or higher installed.
-
-### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/explainable-gw-ai.git
-cd explainable-gw-ai
+git clone https://github.com/Naidu2342/OpenGWAI.git
+
+cd OpenGWAI
 ```
 
-### 2. Install Dependencies
+### Create Virtual Environment
+
+#### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+#### Linux / macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+### Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure your API Keys
-The system can leverage Hugging Face or Gemini to explain your detections.
-- **Hugging Face Inference (Default):** Open `streamlit_app.py` and replace `"YOUR_HF_TOKEN_HERE"` on line 33 with your Hugging Face API Token.
-- **Gemini API:** Configure the API key in `test_api.py` if using Google's models.
+---
 
-### 4. Run the Streamlit Application
+## ▶ Running OpenGWAI
+
+Launch the Streamlit dashboard:
+
 ```bash
 streamlit run streamlit_app.py
 ```
 
----
-
-## 🔬 Getting LIGO Strain Data
-
-To test the detector with real astrophysical events, download HDF5 strain files directly from the **Gravitational Wave Open Science Center (GWOSC)**:
-1. Navigate to [GWOSC](https://www.gw-openscience.org).
-2. Select classic events such as **GW150914** (First binary black hole merger) or **GW170817** (First binary neutron star merger).
-3. Download the 4096 Hz `.hdf5` strain files.
-4. Upload them directly in the **Upload & Detect** tab of the Streamlit App!
+The application will automatically open in your browser.
 
 ---
 
-## 🔬 Scientific Disclaimer & Limitations
+## 📊 Included Datasets
 
-> [!WARNING]
-> This system is an **educational and research prototype** designed to demonstrate explainable AI and signal processing concepts. It is **not** an official scientific LIGO verification pipeline.
-> 
-> Deep learning confidence scores and localized neural detections should not be treated as absolute astrophysical confirmations. Confirmed detections require multi-detector coincidence (LIGO Hanford, LIGO Livingston, Virgo, KAGRA), exhaustive statistical modeling, and rigorous peer review.
+The repository already contains sample datasets for experimentation and testing.
+
+### fake_raw_signal.hdf5
+
+Synthetic detector data containing:
+
+* Simulated gravitational-wave chirps
+* Gaussian noise
+* Instrument glitches
+* Low-frequency drift
+* High-frequency interference
+
+### X.npy
+
+Preprocessed training samples used by the neural network.
+
+### y.npy
+
+Corresponding labels for supervised training.
+
+These datasets allow immediate testing without requiring external preprocessing.
+
+---
+
+## 🧠 Model Architecture
+
+The detection engine uses a 1D Convolutional Neural Network optimized for time-series classification.
+
+### Components
+
+* Conv1D Layers
+* ReLU Activations
+* Batch Normalization
+* Max Pooling Layers
+* Dense Layers
+* Dropout Regularization
+* Sigmoid Output Layer
+
+### Training Features
+
+* EarlyStopping
+* ReduceLROnPlateau
+* Class Weight Balancing
+* Validation Monitoring
+
+---
+
+## 🛠 Core Scripts
+
+### streamlit_app.py
+
+Main application responsible for:
+
+* File Upload
+* Signal Processing
+* FFT Analysis
+* CNN Inference
+* Explainable AI Reporting
+* Visualization
+
+### build_waveform_dataset.py
+
+Creates training datasets from gravitational-wave strain data.
+
+### train_cnn.py
+
+Trains the 1D CNN detection model.
+
+### evalaute_model.py
+
+Evaluates model performance using:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+
+### explore_file.py
+
+Explores HDF5 detector files and metadata.
+
+### generate_fake_raw_hdf5.py
+
+Generates synthetic gravitational-wave datasets for testing and benchmarking.
+
+---
+
+## 🔬 Supported Workflow
+
+```text
+Upload Signal
+      │
+      ▼
+Signal Processing
+      │
+      ▼
+FFT Analysis
+      │
+      ▼
+CNN Detection
+      │
+      ▼
+Explainable AI
+      │
+      ▼
+Interactive Report
+```
+
+---
+
+## 🎯 Use Cases
+
+* Gravitational-Wave Signal Detection
+* Explainable AI Research
+* Deep Learning for Time-Series Analysis
+* Astrophysics Education
+* DSP Learning Projects
+* AI in Scientific Computing
+* Student Research Projects
+* Machine Learning Demonstrations
+
+---
+
+## 📷 Screenshots
+
+### Dashboard
+
+```text
+Add Dashboard Screenshot Here
+```
+
+### Signal Processing
+
+```text
+Add Signal Processing Screenshot Here
+```
+
+### FFT Analysis
+
+```text
+Add FFT Screenshot Here
+```
+
+### Explainable AI Report
+
+```text
+Add AI Report Screenshot Here
+```
+
+---
+
+## 🔮 Future Roadmap
+
+* Multi-Detector Coincidence Analysis
+* Virgo Integration
+* KAGRA Integration
+* Transformer-Based Detection Models
+* SHAP Explainability
+* Grad-CAM Visualizations
+* Event Ranking Engine
+* Real-Time Monitoring
+* Black Hole Parameter Estimation
+* Neutron Star Merger Analysis
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Add feature"
+```
+
+4. Push changes
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+## 📚 Citation
+
+If you use OpenGWAI in academic work, please cite:
+
+```bibtex
+@software{OpenGWAI2026,
+  author = {Lakshmi Narayana Naidu},
+  title = {OpenGWAI: Open Gravitational-Wave Explainable Artificial Intelligence Framework},
+  year = {2026},
+  url = {https://github.com/Naidu2342/OpenGWAI}
+}
+```
+
+---
+
+## ⚠ Scientific Disclaimer
+
+This project is an educational and research prototype.
+
+The predictions generated by OpenGWAI are not official gravitational-wave detections. Confirmed discoveries require rigorous statistical validation, multi-detector coincidence analysis, astrophysical verification, and peer-reviewed scientific review.
+
+---
+
+## 👨‍💻 Author
+
+### Lakshmi Narayana Naidu
+
+Founder — Hack Culprit
+
+Research Interests:
+
+* Explainable AI (XAI)
+* Machine Learning
+* Astrophysics
+* Gravitational-Wave Astronomy
+* Scientific Computing
+* Deep Learning
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
+
+---
+
+<p align="center">
+Made for Scientific Discovery, Explainable AI, and Gravitational-Wave Research 🌌
+</p>
