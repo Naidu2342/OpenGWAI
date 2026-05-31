@@ -330,32 +330,7 @@ Interactive Report
 ---
 
 ## 📷 Screenshots
-
-### Dashboard
-
-```text
-Add Dashboard Screenshot Here
-```
-
-### Signal Processing
-
-```text
-Add Signal Processing Screenshot Here
-```
-
-### FFT Analysis
-
-```text
-Add FFT Screenshot Here
-```
-
-### Explainable AI Report
-
-```text
-Add AI Report Screenshot Here
-```
-
----
+![OpenGWAI Dashboard](assets/Screenshot 2026-05-31 111809.png)
 
 ## 🔮 Future Roadmap
 
