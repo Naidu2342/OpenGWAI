@@ -1,0 +1,12 @@
+streamlit
+h5py
+numpy
+plotly
+scipy
+keras
+tensorflow
+huggingface_hub
+scikit-learn
+joblib
+matplotlib
+google-generativeai

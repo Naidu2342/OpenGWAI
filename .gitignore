@@ -1,0 +1,34 @@
+# Large Datasets & NumPy Arrays
+X.npy
+y.npy
+*.npy
+*.npz
+
+# LIGO HDF5 Data Files
+*.hdf5
+*.h5
+
+# Machine Learning Models
+models/*.keras
+models/*.h5
+models/*.pkl
+models/*.joblib
+
+# Local History Ledger & Logs
+history/*.json
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.venv
+env/
+ENV/
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
