@@ -4,8 +4,6 @@ import sys
 # KERAS / TENSORFLOW FIX
 # =====================================================
 
-sys.path.insert(0, r"C:\tf_pkg")
-
 # =====================================================
 # IMPORTS
 # =====================================================
@@ -30,7 +28,7 @@ from huggingface_hub import InferenceClient
 # HUGGING FACE CONFIG
 # =====================================================
 
-HF_TOKEN = ""
+HF_TOKEN = st.secrets["HF_TOKEN"]
 
 HF_MODEL = "Qwen/Qwen2.5-72B-Instruct"
 
