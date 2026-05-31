@@ -18,19 +18,27 @@ The platform handles everything from raw detector telemetry to fully explained s
 
 ```mermaid
 flowchart TD
-    A[Raw LIGO HDF5 File] --> B[Metadata Extraction & Spacing]
-    A --> C[1D Strain Time Series]
-    C --> D[Butterworth Low-pass Filter]
-    D --> E[Signal Normalization]
-    E --> F[Sliding-Window Segmentation]
-    E --> G[Fast Fourier Transform (FFT)]
-    F --> H[1D CNN Inference Engine]
-    H --> I[Localized Probabilities]
-    G --> J[Spectral Peak & Energy Metrics]
-    I --> K[AI Scientific Interpretation LLM]
-    J --> K
-    B --> K
-    K --> L[Interactive Streamlit Dashboard]
+
+A[Raw LIGO HDF5 File] --> B[Metadata Extraction]
+A --> C[Strain Signal]
+
+C --> D[Butterworth Filtering]
+D --> E[Signal Normalization]
+
+E --> F[Sliding Window Segmentation]
+E --> G[FFT Analysis]
+
+F --> H[1D CNN Detection Model]
+H --> I[Detection Probabilities]
+
+G --> J[Spectral Metrics]
+
+B --> K[Explainable AI Engine]
+I --> K
+J --> K
+
+K --> L[Scientific Report]
+K --> M[Interactive Dashboard]
 ```
 
 ---
