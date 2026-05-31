@@ -334,6 +334,8 @@ Interactive Report
 ![OpenGWAI Dashboard](assests/Screenshot2.png)
 ![OpenGWAI Dashboard](assests/Screenshot4.png)
 ![OpenGWAI Dashboard](assests/Screenshot5.png)
+![OpenGWAI Dashboard](assests/Screenshot6.png)
+![OpenGWAI Dashboard](assests/Screenshot7.png)
 
 ## 🔮 Future Roadmap
 
