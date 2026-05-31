@@ -330,7 +330,7 @@ Interactive Report
 ---
 
 ## 📷 Screenshots
-assets/Screenshot 2026-05-31 111809.png
+![OpenGWAI Dashboard](assets/Screenshot1.png)
 
 ## 🔮 Future Roadmap
 
